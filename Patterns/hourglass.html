@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hourglass Pattern</title>
+</head>
+<body style="white-space: pre-wrap;font-family: monospace;">
+	<script>
+		function hourglass() {
+			var n = document.getElementById('n').value;
+			document.write("<body style='white-space: pre-wrap;font-family: monospace;'>");
+			for(var i=n;i>0;i--) {
+				document.write("&nbsp;&nbsp;".repeat(n-i));
+				for(var j=i;j>(-1*i)-1;j--) {
+					document.write(Math.abs(j)+" ");
+				}
+				document.write('<br>');
+			}
+			document.write("&nbsp;&nbsp;".repeat(n)+'0 <br>');
+			for(var i=1;i<=n;i++) {
+				document.write("&nbsp;&nbsp;".repeat(n-i));
+				for(var j=i;j>(-1*i)-1;j--) {
+					document.write(Math.abs(j)+" ");
+				}
+				document.write('<br>');
+			}
+			document.write('<body>');
+		}
+	</script>
+	<form>
+		<input autofocus type="number" name="n" id="n"><br>
+		<button onclick="hourglass()">Print Pattern</button>
+	</form>
+</body>
+</html>
