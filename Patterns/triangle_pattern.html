@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Triangle Pattern</title>
+</head>
+<body style="white-space: pre-wrap;font-family: monospace;"></body>
+<script>
+    function trianglePattern(){
+        let i, space, rows, k=0, count=0, count1=0
+        rows = document.getElementById('rows').value;
+        document.write("<body style='white-space: pre-wrap;font-family: monospace;'>");
+        for(i=1;i<=rows;i++){
+            for(space=1;space<=rows-i;space++){
+                document.write('&nbsp;&nbsp;')
+                count+=1
+            }
+            while(k!= (2*i-1)){
+                if(count<=rows-1){
+                    document.write(i+k)
+                    document.write('&nbsp;')
+                    count+=1
+                }
+                else{
+                    count1+=1
+                    document.write(i+k-2*count1)
+                    document.write('&nbsp;')
+                }
+                k+=1
+            }
+            count1 = 0
+            count = 0
+            k = 0
+            document.write("<br>")
+        }
+        document.write('<body>');
+    }
+</script>
+<form>
+    <input autofocus type="number" name="rows " id="rows"><br>
+    <button onclick="trianglePattern()">Print Pattern</button>
+</form>
+</body>
+</html>
