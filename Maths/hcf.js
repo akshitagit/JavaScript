@@ -1,5 +1,5 @@
-//GCD FUNCTION
-let gcd = function(a, b) {
+//hcf FUNCTION
+let hcf = function(a, b) {
   a = Math.abs(a)
   b = Math.abs(b)
   while (a != b) {
@@ -18,12 +18,12 @@ for (let i=0; i<n; i++) {
 
 
 
-let gcdArr = function(arr) {
-  let gcdres = gcd(arr[0], arr[1])
+let hcfArr = function(arr) {
+  let hcfres = hcf(arr[0], arr[1])
   for (let i=3; i<arr.length; i++) {
-    gcdres = gcd(gcdres, arr[i])
+    hcfres = hcf(hcfres, arr[i])
   }
-  return gcdres
+  return hcfres
 }
 
-console.log(gcdArr(arr));
+console.log(hcfArr(arr));
