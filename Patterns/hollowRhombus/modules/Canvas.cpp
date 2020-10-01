@@ -8,6 +8,8 @@ using std::cout;
 using std::strcat;
 using std::string;
 
+bool diamonRule(PointerPosition, CanvasSize);
+
 Canvas::Canvas(int canvasSize, Pixel pixelType)
 {
 	this->size = {canvasSize, canvasSize};
@@ -65,15 +67,8 @@ string Canvas::addFrame(PointerPosition p)
 
 string Canvas::addShape(PointerPosition conPos)
 {
-	// TODO
-	int increasingVerticalParam = conPos.y <= this->conSize.height / 2 ? conPos.y : this->conSize.height - 1 - conPos.y;
-	int shapeSize = 1 + (increasingVerticalParam * 2);
-	int emptySize = this->conSize.width - shapeSize;
-	Area shapeArea{
-		emptySize / 2 - 1, // -1 due to pos start from 0
-		shapeSize + emptySize / 2,
-	};
-	if (conPos.x > shapeArea.start && conPos.x < shapeArea.end)
+	bool isInDiamonShape = diamonRule(conPos, this->conSize);
+	if (isInDiamonShape)
 		return this->addBlock(this->block.hollow);
 	return this->addBlock(this->block.solid);
 }

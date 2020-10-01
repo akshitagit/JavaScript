@@ -1,6 +1,6 @@
 NAME=drawDiamon
 MOD=modules/
-ALL=main.o verification.o Canvas.o
+ALL=main.o verification.o Canvas.o engine.o
 STD=c++2a
 
 all: $(NAME)
@@ -15,6 +15,9 @@ verification.o: $(MOD)verification.cpp
 	g++ -c $^ -std=$(STD)
 
 Canvas.o: $(MOD)Canvas.cpp
+	g++ -c $^ -std=$(STD)
+
+engine.o: $(MOD)engine.cpp
 	g++ -c $^ -std=$(STD)
 
 clean:
