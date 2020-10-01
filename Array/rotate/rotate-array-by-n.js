@@ -8,7 +8,7 @@ function rotateArrayByN(array,n,direction = 'right') {
     }
     
 }
-console.log(rotateArrayByN([1, 2, 3, 4, 5, 6, 7],2,'left'));
+
 /** 
 console.log(rotateArrayByN([1, 2, 3, 4, 5, 6, 7],2));
 // Output  [3, 4, 5, 6, 7, 1, 2]
