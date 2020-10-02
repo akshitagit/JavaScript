@@ -1,6 +1,6 @@
 // numbers = [2, 4, 6]
 // numbers = [54, 24]
- coonumbers = [15, 25, 35]
+ numbers = [15, 25, 35]
 
 function hcf(num, numbers) {
 
