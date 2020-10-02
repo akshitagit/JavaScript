@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollow Rhombus Shape (Diamon Shape)</title>
+    <style>
+        html,
+        body {
+            min-height: 100vh;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ededed;
+        }
+
+        pre {
+            font-family: 'Courier New', Courier, monospace;
+            color: #ececec;
+            background-color: #30475e;
+            border: 1px solid #222831;
+            border-radius: 2px;
+            padding: 17px 13px 10px
+        }
+    </style>
+    <script src='hollowRhombus.js'></script>
+</head>
+
+<body>
+    <pre id='main'></pre>
+</body>
+<script>
+    const shape = generateCanvas(
+        { width: 9, height: 9 },
+        { hollow: ' ', solid: '*' }
+    )
+    document.querySelector('#main').innerHTML = shape
+</script>
+
+</html>
