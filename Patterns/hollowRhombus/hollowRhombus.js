@@ -70,3 +70,9 @@ const generateCanvas = (size = { width, height }, block = { hollow, solid }) => 
                 addCanvasFrame({ x, y }, size, block.solid)
     return canvas
 }
+
+/**
+ * For NodeJs only,
+ * Ignore it if you run Web GUI.
+ */
+module.export = generateCanvas
