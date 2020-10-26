@@ -7,29 +7,25 @@ is sorted, move to the next iteration and repeat without touch the sorted(left)
 part.
 */
 
-export default SelectionSort = function (arr) {
-  let n = arr.length;
-
-  for (let i = 0; i < n; i++) {
-    // Set the minimum to this position.
-    min_index = i;
-
-    // Looking for a smaller number in the unsorted subarray.
-    for (let j = i + 1; j < n; j++) {
-      // If find one, set the minimum to this position.
-      if (arr[j] < arr[min_index]) {
-        min_index = j;
+export default SelectionSort = (arr) => {
+  // function to swap the elements in the array
+  const swap = (a,b) =>{
+    let temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+  }
+  // the minIndex
+  let minIndex;
+  for(let i=0;i<arr.length; i++){
+    // start with the i as minIndex
+    minIndex = i;
+    for(let j=0;j<arr.length;j++){
+      // when you find new min value update the minIndex with j as new 
+      if(arr[j]<arr[minIndex]){
+        minIndex = j;
       }
     }
-
-    // If the current minimum index is not the minimum index you started with, swap the elements.
-    if (min_index != i) {
-      let temp = arr[i];
-      arr[i] = arr[min_index];
-      arr[min_index] = temp;
-    }
+    if(i !== minIndex) swap(i, minIndex);
   }
   return arr;
-};
-
-// This has the time complexity of O(n^2)
+}
