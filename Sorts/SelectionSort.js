@@ -9,23 +9,23 @@ part.
 
 export default SelectionSort = (arr) => {
   // function to swap the elements in the array
-  const swap = (a,b) =>{
+  const swap = (a, b) => {
     let temp = arr[a];
     arr[a] = arr[b];
     arr[b] = temp;
-  }
+  };
   // the minIndex
   let minIndex;
-  for(let i=0;i<arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     // start with the i as minIndex
     minIndex = i;
-    for(let j=0;j<arr.length;j++){
-      // when you find new min value update the minIndex with j as new 
-      if(arr[j]<arr[minIndex]){
+    for (let j = i + 1; j < arr.length; j++) {
+      // when you find new min value update the minIndex with j as new
+      if (arr[j] < arr[minIndex]) {
         minIndex = j;
       }
     }
-    if(i !== minIndex) swap(i, minIndex);
+    if (i !== minIndex) swap(i, minIndex);
   }
   return arr;
-}
+};
