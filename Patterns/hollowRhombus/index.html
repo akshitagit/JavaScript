@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollow Rhombus Shape (Diamon Shape)</title>
+    <style>
+        html,
+        body {
+            min-height: 100vh;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ededed;
+        }
+
+        #controller {
+            width: 100%
+        }
+
+        #console {
+            font-family: 'Courier New', Courier, monospace;
+            color: #ececec;
+            background-color: #30475e;
+            border: 1px solid #222831;
+            border-radius: 2px;
+            padding: 19px 17px 10px
+        }
+    </style>
+    <script src='hollowRhombus.js'></script>
+    <script>
+        const draw = (input, output) => {
+            const shape = generateCanvas(
+                { width: input.value, height: input.value },
+                { hollow: ' ', solid: '*' }
+            )
+            output.innerHTML = shape
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <form id='input'>
+            <input type='range' name='controller' id='controller' value='9' min='1' max='19' step='2'>
+        </form>
+        <pre id='console'></pre>
+    </main>
+</body>
+<script>
+    const input = document.querySelector('#controller')
+    const output = document.querySelector('#console')
+    draw(input, output)
+    input.addEventListener(
+        'change',
+        e => draw(e.target, output)
+    ) 
+</script>
+
+</html>
