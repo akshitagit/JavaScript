@@ -18,19 +18,31 @@ Use this repo for contributing in open source. Start solving issues and raise th
 
 Find a ISSUE you want to contribute to ->> Fork it
 
-Clone it to your local system
+* Clone it to your local system
 
-Make a new branch
+```markdown
+git clone https://github.com/your-username/hacktoberfest.git
+```
 
-Make your changes
+* Make a new branch
 
-Push it back to your repo
+```markdown
+git checkout -b branch-name
+```
 
-Click the Compare & pull request button
+* Make your changes
 
-Click Create pull request to open a new pull request
+* Commit and push
 
-If the reviewers ask for changes, repeat steps 5 and 6 to add more commits to your pull request.
+```markdown
+git add .
+git commit -m 'Commit message'
+git push origin branch-name
+```
+
+* Create a new pull request from your forked repository (Click the `New Pull Request` button located at the top of your repo)
+* Wait for your PR review and merge approval!
+* __Star this repository__ if you had fun!
 
 The implementations/codes which are added/merged in JavaSript-:
 
