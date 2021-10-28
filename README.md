@@ -44,6 +44,7 @@ git push origin branch-name
 * Wait for your PR review and merge approval!
 * __Star this repository__ if you had fun!
 
-The implementations/codes which are added/merged in JavaSript-:
+### Contributors :pray: :dizzy:
+![105](https://contributors-img.web.app/image?repo=akshitagit/JavaScript)
 
 Happy coding!
