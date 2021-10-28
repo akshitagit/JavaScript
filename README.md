@@ -45,6 +45,6 @@ git push origin branch-name
 * __Star this repository__ if you had fun!
 
 ### Contributors :pray: :dizzy:
-![105](https://contributors-img.web.app/image?repo=akshitagit/JavaScript)
+![10](https://contributors-img.web.app/image?repo=akshitagit/JavaScript)
 
 Happy coding!
