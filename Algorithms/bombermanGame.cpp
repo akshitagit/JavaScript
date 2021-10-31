@@ -1,7 +1,7 @@
 /**
  * Problem link: https://www.hackerrank.com/challenges/bomber-man/problem
  * 
- * Problem statement is too big to place here. Please read it on the link given above.
+ * Problem statement is too big to place in this file. Please read it on the link given above.
  */
 
 #include <iostream>
