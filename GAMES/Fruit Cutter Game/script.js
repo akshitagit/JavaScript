@@ -49,7 +49,7 @@ $('#fruit1').mouseover(function () {
 function addHearts() {
     $('#trialsLeft').empty();
     for (var i = 0; i < trialsLeft; i++) {
-        $('#trialsLeft').append('<img src="images/heart.png" class="life">');
+        $('#trialsLeft').append('<img src="Images/heart.png" class="life">');
     }
 }
 //start sending fruits
@@ -90,7 +90,7 @@ function startAction () {
     }, 10);
 }
 function chooseFruit() {
-    $('#fruit1').attr('src', 'images/' + fruits[Math.round(8 * Math.random())] + '.png');
+    $('#fruit1').attr('src', 'Images/' + fruits[Math.round(8 * Math.random())] + '.png');
 }
 //stop dropping fruits
     
