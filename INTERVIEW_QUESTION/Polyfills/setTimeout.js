@@ -37,7 +37,7 @@
     // Polyfill for setTimeout
     window.mySetTimeout = function (callback, delay = 0) {
       // check if arguments are of correct type
-      if (typeof callback !== "function") throw new Error("cb should be a function");
+      if (typeof callback !== "function") throw new Error("callback should be a function");
       if (typeof delay !== "number" || delay < 0)
         throw new Error("delay should be a positive number");
   
