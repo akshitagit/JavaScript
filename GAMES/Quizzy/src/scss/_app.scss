@@ -1,0 +1,495 @@
+// Header Styling
+
+.header{
+    background-color: $primary-1;
+    padding: 50px 0;
+
+    &-wrapper{
+        display: flex;
+        align-items: center;
+
+        img {
+            cursor: pointer;
+        }
+    }
+}
+
+//Home Styling
+
+.home {
+    margin: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        color: $primary-1;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    ul {
+        padding-left: unset;
+    }
+}
+
+// Home Screen (Login)
+
+.login{
+    background-color: $secondary-1;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 70px 0;
+
+        h2{
+            font-style: italic;
+        }
+    }
+}
+
+//Game Styling
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0;
+
+    &-timer{
+        font-size: 34px;
+        color: $primary-1;
+        font-weight: bold;
+        background: $primary-2;
+        border-radius: 100%;
+        padding: 10px 20px;
+        margin-bottom: 50px;
+        height: 70px;
+        width: 70px;
+        text-align: center;
+    }
+
+    &-stats{
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        align-items: center;
+    }
+
+    &-points, &-total-score{
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+
+        span{
+            font-size: 45px;
+            color: $primary-2;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding-left: 5px;
+            position: relative;
+            top: -4px;
+        }
+    }
+
+    &-question {
+        font-size: 50px;
+        margin: 50px 0;
+        border: 5px solid $primary-2;
+        padding: 20px 150px;
+        border-radius: 25px;
+        width: calc(100% - 37%);
+
+        p {
+            text-align: center;
+        }
+    }
+
+    &-options{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 68%;
+
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 0;
+
+            li{
+                width: 36%;
+                padding: 10px 0px;
+                margin: 10px 0;
+                transition: ease-in-out 0.4s;
+                cursor: pointer;
+
+                .primary-btn{
+                    width: 100%;
+                    margin: 0;
+                    border-radius: 5px;
+                    font-size: 22px;
+                    padding: 20px 0;
+                    border: 3px solid $primary-2;
+
+                    &.true{
+                        background-color: $true;
+                        color: $text-color;
+                    }
+
+                    &.false{
+                        background-color: $false;
+                        color: $text-color;
+                    }
+                }
+
+
+                &:hover{
+                    background-color: $primary-2;
+                    margin: 0;
+                    padding: 0;
+
+                    .primary-btn{
+                        margin: 0;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &-question-controls {
+        margin-top: 50px;
+    }
+}
+// Quiz List Page 
+
+.classic-quiz-list {
+    margin: 70px 0;
+
+    h1 {
+        color: $primary-1;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .classic-quizzes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: unset;
+        flex-direction: column;
+
+        ul {
+            padding-left: unset;
+
+            @media (max-width: 767px) {
+                width: 90%;
+            }
+
+            li {
+                cursor: pointer;
+                margin-bottom: 3px;
+                border: 1px solid $primary-2;
+                padding: 20px;
+                margin-bottom: 20px;
+                min-width: 500px;
+
+                &:hover {
+                    background-color: $primary-2;
+
+                    label {
+                        color: $text-color;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    min-width: unset;
+                }
+
+                label {
+                    font-family: $font-secondary;
+                    font-size: 22px;
+                    line-height: 20px;
+                    color: $primary-2;
+
+                    &:last-child {
+                        float: right;
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Footer Styling
+
+.footer{
+    background-color: $primary-1;
+    width: 100%;
+    color: $text-color;
+    font-family: $font-secondary;
+    font-size: 20px;
+    padding: 30px 0;
+}
+
+//Result Screen
+
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 70px 0;
+
+    &-stats{
+        font-size: 35px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-correct-count, &-inCorrect-count, &-skipped-count{
+        display: flex;
+        align-items: center;
+        
+        span{
+            color: $true;
+            font-size: 65px;
+            padding-left: 10px;
+            position: relative;
+            top: -6px;
+        }
+    }
+
+    &-inCorrect-count{
+        span{
+            color: $false;
+        }
+    }
+
+    &-skipped-count{
+        span{
+            color: $primary-1;
+        }
+    }
+
+    &-score{
+        display: flex;
+        align-self: flex-start;
+        align-items: center;
+        font-size: 35px;
+
+        span{
+            font-size: 65px;
+            padding-left: 10px;
+            position: relative;
+            top: -6px;
+        }   
+    }
+
+    &-list{
+        li{
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 10px;
+    
+            &.true{
+                background-color: $trueflat;
+            }
+    
+            &.false{
+                background-color: $falseflat;
+            }
+        }
+        .question{
+            color: $text-color;
+            font-size: 30px;
+        }
+    
+        .correct-answer, .user-answer{
+            color: $text-color;
+            font-size: 24px;
+    
+            span{
+                color: $text-color;
+            }
+        }
+    }
+}
+
+//Create Quiz
+
+.create-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0;
+
+    h2{
+        margin: 30px 0;
+    }
+
+    .quiz-category{
+        position: relative;
+        display: flex;
+        width: 300px;
+        height: 58px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 30px 0;
+
+        &:after{
+            content: '\25BC';
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1em;
+            background-color: $primary-1;
+            transition: .25s all ease;
+            pointer-events: none;
+            color: $primary-2;
+        }
+
+        &:hover{
+            &:after{
+                color: $text-color;
+            }
+        }
+
+        select{
+            appearance: none;
+            outline: 0;
+            border: 0;
+            box-shadow: none;
+            flex: 1;
+            padding: 0 1em;
+            color: $primary-1;
+            background-color: $primary-2;
+            background-image: none;
+            cursor: pointer;
+        }
+    }
+
+    .question-index-wrapper{
+        margin-bottom: 20px;
+        label{
+            font-size: 28px;
+
+            span{
+                font-size: 32px;
+                color: $primary-2;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .question-controls{
+        margin-bottom: 30px;
+    }
+}
+
+//My Quizes
+
+.my-quizzes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .quizzes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: unset;
+        flex-direction: column;
+
+        ul {
+            padding-left: unset;
+
+            @media (max-width: 767px) {
+                width: 90%;
+            }
+
+            li {
+                cursor: pointer;
+                margin-bottom: 3px;
+                border: 1px solid $primary-2;
+                padding: 20px;
+                margin-bottom: 20px;
+                min-width: 500px;
+
+                &:hover {
+                    background-color: $primary-2;
+
+                    label {
+                        color: $text-color;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    min-width: unset;
+                }
+
+                label {
+                    font-family: $font-secondary;
+                    font-size: 22px;
+                    line-height: 20px;
+                    color: $primary-2;
+
+                    &:last-child {
+                        float: right;
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    h2{
+        margin: 30px 0;
+    }
+
+    .quiz-name, .quiz-author{
+        font-size: 28px;
+    }
+
+    .quiz-author{
+        margin-left: 10px;
+    }
+}
+
+.results-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        margin-bottom: 30px;
+    }
+
+    li{
+        cursor: pointer;
+        margin-bottom: 3px;
+        border: 1px solid #7FC3BA;
+        padding: 20px;
+        margin-bottom: 20px;
+        min-width: 500px;
+        color: $primary-2;
+    }
+}
