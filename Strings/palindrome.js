@@ -13,23 +13,19 @@
  * @returns {boolean}
  */
 function isPalindrome(string) {
-  const stringLength = string.length;
-
-  if (stringLength <= 1) return true;
-
-  for (let index = 0; index < stringLength / 2; index++) {
-    if (string[index] !== string[stringLength - 1 - index]) {
-      return false;
-    }
+  if((string === string.split("").reverse().join(""))){
+    return true;
+  }else{
+    return false;
   }
-
-  return true;
 }
 
 function isPalindromeTest() {
   const stringList = ['', 'hi', 'ANA', 'racecar'];
 
   for (string of stringList) {
-    console.assert(isPalindrome(string), 'Ups! %s is not palindrome :/', string);
+    console.log(isPalindrome(string), 'Ups! %s is not palindrome :/', string);
   }
 }
+
+isPalindromeTest();
