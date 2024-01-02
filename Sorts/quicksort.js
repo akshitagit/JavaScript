@@ -11,9 +11,10 @@
 
 function partition( arr,  start,  end) {
     let p = start;
-    let pivot = arr[end];
+    let middle = Math.floor((start + end) / 2); // take pivot as middle element for lesser comparisons and faster computation
+    let pivot = arr[middle];
     for (let i = start; i < end; i++) {
-        if (arr[i] >= pivot) {
+        if (arr[i] <= pivot) { 
             let temp = arr[i];
             arr[i] = arr[p];
             arr[p] = temp;
